@@ -1,12 +1,14 @@
 %-------------------------
 % Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
+% Adapted by : Jden Goh
+% Based on: Jake Gutierrez's LaTeX Resume Template
+% Source: https://github.com/jakegut/resume
 % License : MIT
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
 
+\usepackage[T1]{fontenc}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -72,7 +74,7 @@
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textbf{#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -83,11 +85,20 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
+% \newcommand{\resumeProjectHeading}[2]{
+%     \item
+%     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+%       \small#1 & #2 \\
+%     \end{tabular*}\vspace{-7pt}
+% }
+
+\newcommand{\resumeProjectHeading}[3]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}
+    \textit{#3}  % This adds the project role below the title
+    \vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -112,36 +123,38 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape Jake Ryan} \\ \vspace{1pt}
-    \small 123-456-7890 $|$ \href{mailto:x@x.com}{\underline{jake@su.edu}} $|$ 
-    \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
-    \href{https://github.com/...}{\underline{github.com/jake}}
+    \textbf{\Huge \scshape Jden Goh} \\ \vspace{1pt}
+    \small +65 98228897 $|$ 
+    \href{mailto:jdengoh28@gmail.com}{\underline{jdengoh28@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/jdengoh/}{\underline{linkedin.com/in/jdengoh/}} $|$
+    \href{https://github.com/jdengoh/}{\underline{github.com/jdengoh/}}
 \end{center}
-
 
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Southwestern University}{Georgetown, TX}
-      {Bachelor of Arts in Computer Science, Minor in Business}{Aug. 2018 -- May 2021}
-    \resumeSubheading
-      {Blinn College}{Bryan, TX}
-      {Associate's in Liberal Arts}{Aug. 2014 -- May 2018}
+      {Nanyang Technological University}{Jul 2022 -- Present}
+      {Bachelor of Computing in Computer Science}{GPA: $4.41$}
   \resumeSubHeadingListEnd
 
+%-----------Career Obejctives-----------
+\section{Career Objectives}
+
+NTU Computer Science undergraduate with self-driven attitude and strong interest in both software engineering and artificial intelligence. I am dedicated to giving back to the community and believe in the potential of AI-integrated applications in healthcare and education sectors. Constantly seeking challenges that can foster personal growth and create meaningful value for my organisations.
 
 %-----------EXPERIENCE-----------
-\section{Experience}
+\section{Work Experience}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Undergraduate Research Assistant}{June 2020 -- Present}
-      {Texas A\&M University}{College Station, TX}
+      {Syanpse}{Jan 2025 -- Present}
+      {Full Stack Developer Integrating AI}{}
       \resumeItemListStart
-        \resumeItem{Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems}
-        \resumeItem{Developed a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data}
-        \resumeItem{Explored ways to visualize GitHub collaboration in a classroom setting}
+        \resumeItem{Developing and enhancing Azure OpenAI-powered chatbot implementing RAG}
+        \resumeItem{Integrating Quart backend to Angular for seamless communication}
+        \resumeItem{Participating in SPRINT meetings for progress tracking, issue resolution, and development alignment}
+        \resumeItem{Exploring Agentic AI frameworks including LangGraph, AI Swarm and Autogen}
       \resumeItemListEnd
       
 % -----------Multiple Positions Heading-----------
@@ -153,27 +166,44 @@
 %     \resumeItemListEnd
 %    \resumeSubHeadingListEnd
 %-------------------------------------------
+      \resumeSubheading
+      {Welfare Service Club - Friends of Children}{June 2023 -- August 2024}
+          {Centre Head}{}
+          \resumeItemListStart
+            \resumeItem{Led a team of 20 student volunteers to teach English and Math to over 25 service users from underprivileged families}
+            \resumeItem{Planned and conducted Life-skills lessons to inculcate and nurture values in service users across Primary and Secondary level}
+            \resumeItem{Collaborated with 14 other centres to organise June and December events for over 300 service users}
+        \resumeItemListEnd
 
     \resumeSubheading
-      {Information Technology Support Specialist}{Sep. 2018 -- Present}
-      {Southwestern University}{Georgetown, TX}
+      {Computhink}{Jul 2023 -- Jun 2024}
+      {Code Mentor}{}
       \resumeItemListStart
-        \resumeItem{Communicate with managers to set up campus computers used on campus}
-        \resumeItem{Assess and troubleshoot computer problems brought by students, faculty and staff}
-        \resumeItem{Maintain upkeep of computers, classroom equipment, and 200 printers across campus}
+        \resumeItem{Held coding courses for over 15 students across Primary and Secondary levels}
+        \resumeItem{Taught basic coding concepts using Scratch and Minecraft Education}
+        \resumeItem{Conducted Data Science lessons cover both concepts and coding, covering Numpy, Pandas and Scikit Learn library}
     \resumeItemListEnd
 
     \resumeSubheading
-      {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
-      {Southwestern University}{Georgetown, TX}
+      {Hummingbird Bioscience}{May 2023 -- Aug 2023}
+      {IT Intern}{}
       \resumeItemListStart
-        \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
-        \resumeItem{Developed a game in Java to test the generated dungeons}
-        \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
-        \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
-        \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
-        \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
+        \resumeItem{Spearheaded project to update company's production database (MariaDB), hosted on Azure}
+        \resumeItem{Facilitated in creation of user documentation and conducted UAT for a new application for inventory management, tracking over 1000 company assets}
+        \resumeItem{Resolved issues and enhanced existing email notifications automation for 2 departments, scheduled with cronjobs}
+        \resumeItem{Compiled and install required software from source on Linux VMs (Ubunthu)}
+        \resumeItem{Aided in improvement to company's in-house Nodejs application written in JavaScript, hosted on Azure}
+        \resumeItem{Utilised Git and Github for version control}
+        \resumeItem{Exposure to cloud computing platform (Microsoft Azure), basics of firewall and networking}
       \resumeItemListEnd
+
+
+    % \resumeSubheading
+    %  {Volunteer}{Aug 2022 -- Present}
+    %  {}{}   
+    %   \resumeItemListStart
+    %     \resumeItem{test}
+    %   \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
@@ -182,34 +212,82 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
+          {\textbf{Realtime Stockmarket Analysis} $|$ \emph{Langchain, RAG, FAISS, LSTM, Streamlit}}{Feb 2025 -- Present}
+          {Lead Developer, Gen AI and RAG Integration}
           \resumeItemListStart
-            \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
-            \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
-            \resumeItem{Visualized GitHub data to show collaboration}
-            \resumeItem{Used Celery and Redis for asynchronous tasks}
+            \resumeItem{Built financial news pipeline that automates extraction, processing, and structuring of real-time stock market news}
+            \resumeItem{Developed RAG-based AI Retrieval System leveraging FAISS and LangChain to enhance financial insight and stock trend analysis}
+            \resumeItem{Engineered custom AI prompts to refine LLM-based market responses by integrating financial sentiment and stock trends to improve AI trading decisions}
+            \resumeItem{Designed and deployed an interactive dashboard using Streamlit for market insights visualisation }
           \resumeItemListEnd
+          
       \resumeProjectHeading
-          {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
-          \resumeItemListStart
-            \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
-            \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
-            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
-            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
-          \resumeItemListEnd
+        {\textbf{Sentiment Analysis on Rotten Tomatoes} $|$ \emph{RNN, CNN, BiLSTIM, BiGRU}} {Sep 2024 -- Nov 2024}
+        {Model Training and Fine-tuning}
+        \resumeItemListStart
+          \resumeItem{\href{https://github.com/jdengoh/SC4002-NLP}{\texttt{github.com/jdengoh/SC4002-NLP}}}
+          \resumeItem{Developed and trained deep learning models to classify movie reviews as positive or negative}
+          \resumeItem{Utilised pre-trained Word2Vec embeddings to improve word representations, and tested different Out-Of-Vocabulary handling approaches to handle unseen words}
+          \resumeItem{Built and evaluated an Ensemble model, integrating multiple models and achieving final accuracy of 78\%}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+          {\textbf{Multidisciplinary Competition Project} $|$ \emph{RPI, YoloV5, UNIX, bash}} {Aug 2024 -- Oct 2024}
+          {RPI Developer and Computer Vision}
+        \resumeItemListStart
+          \resumeItem{\href{https://github.com/jdengoh/MDP\_Grp4\_rpi}{\texttt{github.com/jdengoh/MDP\textunderscore Grp4\textunderscore rpi}}}
+          \resumeItem{Achieved 9th place and 15th place in Task 1 and Task 2 respectively}
+          \resumeItem{Implemented a multi-process architecture with Python’s multiprocessing library to manage 5 concurrent processes}
+          \resumeItem{Established a queue system and lock management to ensure synchronised, real-time communication between the Raspberry Pi, STM board, Android application, algorithm, and image inference server}
+          \resumeItem{Utilised YOLOv5 for real-time object detection, trained on a dataset of 2,000+ annotated images annotated via Roboflow}
+          \resumeItem{Designed and deployed image inference CRUD API server using Python Flask}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+          {\textbf{NUS - NCS Innovation Challenge} $|$ \emph{Data Pipeline, API, Gen AI, OpenCV, YoloV3}} {Feb 2024 -- Apr 2024}
+          {Data Pipeline and Machine Learning Engineer}
+        \resumeItemListStart
+          \resumeItem{\href{https://github.com/jdengoh/TransportGPT}{\texttt{github.com/jdengoh/TransportGPT}}}
+          \resumeItem{Implemented to provide real-time updates and navigation assistance to drivers}
+          \resumeItem{Set up pipelines to pull live traffic data from APIs (LTA Datamall)}
+          \resumeItem{Adopted You-Only-Look-Once (YOLO) system to analyse real-time images pulled from APIs}
+          \resumeItem{Implemented Langchain framework for use in model's contextual awareness}
+          \resumeItem{Integrated Geopy to process location data}
+        \resumeItemListEnd
+        
+        \resumeProjectHeading
+          {\textbf{EatAlready - Web Application} $|$ \emph{Django, SqLite, Javascript, HTML/CSS, API}} {Jan 2024 -- Apr 2024}
+          {Backend Developer}
+        \resumeItemListStart
+          \resumeItem{\href{https://github.com/jdengoh/SC2006-project}{\texttt{github.com/jdengoh/SC2006-project}}}
+          \resumeItem{Developed an itinerary and food recommendation web app using Django}
+          \resumeItem{Utilised Django as backend and Google API}
+          \resumeItem{Adopted Django REST Framework}
+          \resumeItem{Developed RESTful API framework used to interact with Frontend and Database (SQLite)}
+        \resumeItemListEnd
+        
+    \resumeProjectHeading
+      {\textbf{Titanic Analysis} $|$ \emph{KNN, Random Forest Classifier, XGBoost}} {Feb 2023 -- Apr 2023}
+      {Machine Learning Engineer}
+    \resumeItemListStart
+      \resumeItem{\href{https://github.com/jdengoh/Titanic-Analysis}{\texttt{github.com/jdengoh/Titanic-Analysis}}}
+      \resumeItem{Analysed survival rate for Titanic disaster using Machine Learning Models}
+      \resumeItem{Employed functions such as chi-squared test to analyse and select best features to be used for Machine Learning Models}
+      \resumeItem{Adopted K-Nearest Neighbour, Random Forest Classifier, and XGBoost to achieve accuracy score above 70\%}
+    \resumeItemListEnd
+        
     \resumeSubHeadingListEnd
-
-
 
 %
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R} \\
-     \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
-     \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
-     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+     \textbf{Languages}{: Java, Python, C/C++, SQL (Postgres, MariaDB, MySQL), JavaScript, HTML/CSS} \\
+     \textbf{Frameworks}{: Flask, FastAPI, Serverpod, Angular} \\
+     \textbf{Developer Tools}{: Git, Docker, Bash} \\
+     \textbf{Libraries}{: pandas, NumPy, PyTorch}
+     \textbf{Others}{: Linux(Debian, Ubuntu, Fedora), Neural Network, Machine Learning, Natural Language Processing}
     }}
  \end{itemize}
 
