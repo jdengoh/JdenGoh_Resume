@@ -24,3 +24,12 @@ jobs:
         with:
           name: resume-pdf
           path: resume.pdf
+          
+      - name: Commit and Push PDF to Repository
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add resume.pdf
+          git commit -m "Auto-update resume.pdf [GitHub Actions]"
+          git push origin master
+        continue-on-error: true  # Avoid failing if nothing changed        
