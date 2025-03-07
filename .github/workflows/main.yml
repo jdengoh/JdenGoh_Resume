@@ -19,7 +19,7 @@ jobs:
         run: pdflatex resume.tex
 
       - name: Upload PDF Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4  # Updated to latest version
         with:
-          name: Resume PDF
+          name: resume-pdf
           path: resume.pdf
